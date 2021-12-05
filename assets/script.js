@@ -1,4 +1,3 @@
-//let saveBtn = $("");
 let today = moment().format('llll');
 
 $("#currentDay").text(today);
@@ -35,7 +34,7 @@ let retrieveLocalStorage  = function() {
 }
 
 //set color of rows based on current time
-let now = new Date();
+    let now = new Date();
 let hour = now.getHours();
 
 for (let i = 9; i < 18; i++) {
@@ -54,6 +53,7 @@ for (let i = 9; i < 18; i++) {
         currentHourBlock.addClass("present");
     }
 }
+
 
     // save inputs to local storage
     $(".saveBtn").on("click", function(event) {
@@ -88,4 +88,10 @@ for (let i = 9; i < 18; i++) {
         localStorage.setItem("storedItem17", JSON.stringify(textarea17))
 
     }); 
+
 retrieveLocalStorage();
+
+
+
+
+
